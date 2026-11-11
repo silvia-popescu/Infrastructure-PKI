@@ -8,18 +8,19 @@ Ce projet consiste à concevoir et déployer une infrastructure PKI (Public Key 
 
 L'objectif est de mettre en place une chaîne de confiance permettant de sécuriser les communications entre clients et serveurs grâce aux certificats numériques et au protocole TLS.
 
-Objectifs
- Créer une autorité de certification racine (Root CA).
- Créer une autorité de certification intermédiaire (Intermediate CA).
+Objectifs:
+
+Créer une autorité de certification racine (Root CA).
+Créer une autorité de certification intermédiaire (Intermediate CA).
 Générer et signer des certificats numériques avec OpenSSL.
 Sécuriser un serveur web avec HTTPS et Nginx.
 Mettre en place l'authentification mutuelle TLS (mTLS).
 Gérer la révocation des certificats avec une CRL.
 Vérifier le fonctionnement de la chaîne de confiance.
 
- Architecture de l'infrastructure
-Le laboratoire repose sur trois machines virtuelles :
-
+ Architecture de l'infrastructure:
+ 
+Le laboratoire repose sur trois machines virtuelles
  Machine virtuelle:
  
 VM "CAracine"  Création de l'autorité racine et signature de la CA intermédiaire 
@@ -49,7 +50,9 @@ Tests réalisés:
 Trois scénarios ont été réalisés pour vérifier le fonctionnement de l'infrastructure :
 
  Connexion sans certificat client | HTTP 400 - Accès refusé 
+ 
  Connexion avec un certificat valide | HTTP 200 – Accès autorisé 
+ 
  Connexion avec un certificat révoqué | HTTP 400 – Accès refusé 
 
 Les tests démontrent le bon fonctionnement de l'authentification mutuelle et de la révocation des certificats.
