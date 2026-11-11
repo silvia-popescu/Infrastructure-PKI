@@ -21,8 +21,11 @@ Vérifier le fonctionnement de la chaîne de confiance.
 Le laboratoire repose sur trois machines virtuelles :
 
  Machine virtuelle:
+ 
 VM "CAracine"  Création de l'autorité racine et signature de la CA intermédiaire 
+
 VM "CAintermediate"  Délivrance et révocation des certificats 
+
 VM "PKI"  Hébergement du serveur web HTTPS avec Nginx et mTLS 
 
  Technologies utilisées:
